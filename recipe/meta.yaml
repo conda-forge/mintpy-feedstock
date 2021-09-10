@@ -11,7 +11,7 @@ source:
 
 build:
   skip: True  # [win or py<36 or py>38]
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -27,7 +27,7 @@ requirements:
     - h5py <3
     - joblib
     - lxml
-    - matplotlib
+    - matplotlib-base
     - numpy
     - pip
     - pyproj
