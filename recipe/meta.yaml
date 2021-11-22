@@ -10,15 +10,16 @@ source:
   sha256: 6c1242dee74f13b96aa4b1f8d50c45ec486397796e4bd4bf3f67849f921bfe7f
 
 build:
-  skip: true  # [win or py<36 or py>38]
+  noarch: python
   number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=3.6,<3.9
     - pip
   run:
-    - python
+    - python >=3.6,<3.9
     - cartopy
     - cvxopt
     - dask >=1.0
