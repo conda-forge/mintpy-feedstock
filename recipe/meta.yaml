@@ -94,7 +94,7 @@ requirements:
     - h5py <3
     - joblib
     - lxml
-    - matplotlib-base<3.5
+    - matplotlib-base <3.5
     - numpy
     - pip
     - pyproj
