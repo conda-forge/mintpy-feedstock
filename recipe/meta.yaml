@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - add_attribute.py = mintpy.add_attribute:main
@@ -94,7 +94,7 @@ requirements:
     - h5py <3
     - joblib
     - lxml
-    - matplotlib-base
+    - matplotlib-base <3.5
     - numpy
     - pip
     - pyproj
