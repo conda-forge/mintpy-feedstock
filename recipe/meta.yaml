@@ -1,5 +1,5 @@
 {% set name = "MintPy" %}
-{% set version = "1.3.2" %}
+{% set version = "1.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,16 +7,17 @@ package:
 
 source:
   url: https://github.com/insarlab/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 6c1242dee74f13b96aa4b1f8d50c45ec486397796e4bd4bf3f67849f921bfe7f
+  sha256: 3986957e31f91580d9aae4815a9160259bb7450e5ac4b95ecb09c009c0a72eae
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - add_attribute.py = mintpy.add_attribute:main
     - add.py = mintpy.add:main
     - asc_desc2horz_vert.py = mintpy.asc_desc2horz_vert:main
+    - closure_phase_bias.py = mintpy.closure_phase_bias:main
     - dem_error.py = mintpy.dem_error:main
     - dem_gsi.py = mintpy.dem_gsi:main
     - diff.py = mintpy.diff:main
@@ -27,6 +28,7 @@ build:
     - image_math.py = mintpy.image_math:main
     - image_stitch.py = mintpy.image_stitch:main
     - info.py = mintpy.info:main
+    - iono_tec.py = mintpy.iono_tec:main
     - load_data.py = mintpy.load_data:main
     - load_gbis.py = mintpy.load_gbis:main
     - local_oscilator_drift.py = mintpy.local_oscilator_drift:main
@@ -82,16 +84,16 @@ build:
 
 requirements:
   host:
-    - python >=3.6,<3.9
+    - python >=3.6
     - pip
   run:
-    - python >=3.6,<3.9
+    - python >=3.6
     - cartopy
     - cvxopt
     - dask >=1.0
     - dask-jobqueue >=0.3
     - defusedxml
-    - h5py <3
+    - h5py
     - joblib
     - lxml
     - matplotlib-base
