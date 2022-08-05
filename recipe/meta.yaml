@@ -112,7 +112,12 @@ requirements:
 test:
   imports:
     - mintpy
+  requires:
+    - pip
   commands:
+    - pip check
+    - mintpy --help
+    - mintpy smallbaselineApp --help
     - smallbaselineApp.py --help
     - view.py --help
     - tsview.py --help
