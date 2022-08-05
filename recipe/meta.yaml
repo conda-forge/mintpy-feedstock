@@ -1,5 +1,5 @@
 {% set name = "MintPy" %}
-{% set version = "1.3.3" %}
+{% set version = "1.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/insarlab/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 3986957e31f91580d9aae4815a9160259bb7450e5ac4b95ecb09c009c0a72eae
+  sha256: 0ed149158ba06ec7b0ba2adf363c46ea517e2362347abb88f72917a926cd05c9
 
 build:
   noarch: python
