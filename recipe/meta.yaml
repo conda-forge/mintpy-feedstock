@@ -100,7 +100,9 @@ requirements:
     - matplotlib-base
     - numpy
     - pip
+    - pre-commit
     - pyproj
+    - rich
     - scikit-image
     - scipy
     - pykml >=0.2
