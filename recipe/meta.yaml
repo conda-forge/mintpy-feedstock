@@ -98,6 +98,7 @@ requirements:
     - lxml
     - matplotlib-base
     - numpy
+    - pre-commit
     - pyaps3 >=0.3
     - pykml >=0.2
     - pyproj
