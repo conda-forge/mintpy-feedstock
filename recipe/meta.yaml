@@ -1,5 +1,5 @@
 {% set name = "MintPy" %}
-{% set version = "1.5.1" %}
+{% set version = "1.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/insarlab/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 36d95505f38de5ea1bf99bfb006a086934765071f8dfa19b407cf06608923a87
+  sha256: 12ba02810f0e41fb1ee73396fb6b9b80316e75e501ec5b7b162eb646849cffe2
 
 build:
   noarch: python
@@ -92,21 +92,23 @@ requirements:
     - cvxopt
     - dask >=1.0
     - dask-jobqueue >=0.3
+    - gdal >=3
     - h5py
     - joblib
     - lxml
     - matplotlib-base
     - numpy
     - pre-commit
+    - pyaps3 >=0.3
+    - pykml >=0.2
     - pyproj
+    - pyresample
+    - pysolid
     - rich
     - scikit-image
     - scipy
-    - pykml >=0.2
-    - pysolid
-    - pyaps3 >=0.3
-    - gdal >=3
-    - pyresample
+    - shapely
+    - utm
 
 test:
   imports:
