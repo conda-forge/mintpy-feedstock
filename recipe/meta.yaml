@@ -85,7 +85,6 @@ requirements:
   host:
     - python >=3.6
     - pip
-    - setuptools-scm
   run:
     - python >=3.6
     - argcomplete
@@ -108,6 +107,7 @@ requirements:
     - rich
     - scikit-image
     - scipy
+    - setuptools-scm
     - shapely
     - utm
 
