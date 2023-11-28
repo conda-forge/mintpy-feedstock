@@ -1,5 +1,5 @@
 {% set name = "MintPy" %}
-{% set version = "1.5.2" %}
+{% set version = "1.5.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/insarlab/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 12ba02810f0e41fb1ee73396fb6b9b80316e75e501ec5b7b162eb646849cffe2
+  sha256: 67cfdb3cc371f4b61a1373fdd85cb0135b7180f4955a44f6145919f2ab440064
 
 build:
   noarch: python
@@ -107,6 +107,7 @@ requirements:
     - rich
     - scikit-image
     - scipy
+    - setuptools-scm
     - shapely
     - utm
 
