@@ -1,8 +1,7 @@
-{% set name = "MintPy" %}
 {% set version = "1.6.1" %}
 
 package:
-  name: {{ name|lower }}
+  name: mintpy
   version: {{ version }}
 
 source:
