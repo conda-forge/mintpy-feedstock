@@ -1,13 +1,13 @@
-{% set name = "MintPy" %}
-{% set version = "1.6.0" %}
+{% set name = "mintpy" %}
+{% set version = "1.6.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/insarlab/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 34772bace944169852a40ca32442748f1262a202b890e049cde4a60c5986f25f
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: b181fea130236043a016c3728c9d7fab567bd620929e94c21bcc2f6495de9883
 
 build:
   noarch: python
@@ -87,6 +87,8 @@ requirements:
   host:
     - python >=3.6
     - pip
+    - setuptools
+    - setuptools_scm
   run:
     - python >=3.6
     - argcomplete
@@ -94,7 +96,7 @@ requirements:
     - cvxopt
     - dask >=1.0
     - dask-jobqueue >=0.3
-    - gdal >=3
+    - gdal <=3.8
     - h5py
     - joblib
     - lxml
