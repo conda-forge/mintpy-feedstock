@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/insarlab/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: eb96647dc291e5b93f766b19f955e05daa7dd2006a87354cfdd07a240173d0b2
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: b181fea130236043a016c3728c9d7fab567bd620929e94c21bcc2f6495de9883
 
 build:
   noarch: python
