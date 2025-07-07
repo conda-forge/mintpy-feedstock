@@ -56,6 +56,7 @@ build:
     - remove_hdf5_dataset.py = mintpy.cli.remove_hdf5_dataset:main
     - remove_ramp.py = mintpy.cli.remove_ramp:main
     - s1ab_range_bias.py = mintpy.cli.s1ab_range_bias:main
+    - save_explorer.py = mintpy.cli.save_explorer:main
     - save_gbis.py = mintpy.cli.save_gbis:main
     - save_gdal.py = mintpy.cli.save_gdal:main
     - save_gmt.py = mintpy.cli.save_gmt:main
@@ -96,18 +97,19 @@ requirements:
     - cvxopt
     - dask >=1.0
     - dask-jobqueue >=0.3
-    - gdal <=3.8
+    - gdal
     - h5py
     - joblib
     - lxml
     - matplotlib-base
     - numpy
     - pre-commit
-    - pyaps3 >=0.3
+    - pyaps3 >=0.3.6
     - pykml >=0.2
     - pyproj
     - pyresample
     - pysolid
+    - requests
     - rich
     - scikit-image
     - scipy
