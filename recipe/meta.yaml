@@ -1,5 +1,5 @@
 {% set name = "mintpy" %}
-{% set version = "1.6.1" %}
+{% set version = "1.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b181fea130236043a016c3728c9d7fab567bd620929e94c21bcc2f6495de9883
+  sha256: 58dc194ce387a4355c8fd547caedf1b9b481b98fd112bd137c0c5d47b33d25c1
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install .[cli] -vv
   entry_points:
     - mintpy = mintpy.__main__:main
